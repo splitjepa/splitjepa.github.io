@@ -43,10 +43,10 @@ figcaption{font-family:var(--serif);font-size:14px;line-height:1.52;color:#555;m
 .hero-teaser figcaption{position:relative;left:50%;width:min(920px,calc(100vw - 40px));transform:translateX(-50%);text-align:center}
 .technique-gif figcaption,.main-theory-figure figcaption{text-align:center}
 
-.tldr{display:block;width:min(960px,calc(100% - 40px));margin-top:30px;padding-top:0;border:0;color:#777;font-size:14px;text-align:center;white-space:nowrap}
-.tldr h2{display:inline;margin:0;color:#000;font:700 14px var(--serif)}
+.tldr{display:block;width:min(1040px,calc(100% - 40px));margin-top:32px;padding:17px 24px 18px;background:#eef6f7;border:1px solid #c5dde0;border-radius:10px;color:#3f484d;text-align:center;white-space:nowrap}
+.tldr h2{display:inline;margin:0;color:var(--blue);font:700 17px var(--serif)}
 .tldr h2::after{content:':'}
-.tldr p{display:inline;margin:0;font:500 14px/1.65 var(--serif)}
+.tldr p{display:inline;margin:0;font:600 16px/1.6 var(--serif)}
 
 .abstract{width:min(860px,calc(100% - 40px));margin-top:48px;padding:31px 42px;background:var(--soft);border:0;border-radius:10px;box-shadow:none}
 .abstract h2,.content-section>h2{font-family:var(--serif);font-size:32px;font-weight:700;line-height:1.2;letter-spacing:0;text-align:center;margin:0 0 22px}
