@@ -1,0 +1,28 @@
+inherit:
+  - common.yaml
+
+data:
+  task: PushCube-v1
+  tag: hshared100
+
+rep:
+  tag: pushcube_splitjepa
+  zh_dim: 128
+  zl_dim: 128
+  epochs: 100
+  lejepa:
+    # Match the total dimensionality of zH + zL.
+    projection_dim: 256
+
+bc:
+  tag: pushcube_splitjepa
+  epochs: 30
+
+eval:
+  variants:
+    - id
+    - ood_camera_yaw_m10
+    - ood_camera_yaw_p10
+    - ood_lighting_scale_0p6
+    - ood_visual_yaw_m10_light_0p6
+    - ood_visual_yaw_p10_light_0p6

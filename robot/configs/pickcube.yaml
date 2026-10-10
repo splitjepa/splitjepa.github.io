@@ -1,0 +1,25 @@
+inherit:
+  - common.yaml
+
+data:
+  task: PickCube-v1
+  tag: hshared100
+
+rep:
+  tag: pickcube_splitjepa
+  zh_dim: 64
+  zl_dim: 64
+  epochs: 200
+
+bc:
+  tag: pickcube_splitjepa
+  epochs: 30
+
+eval:
+  variants:
+    - id
+    - ood_camera_yaw_m10
+    - ood_camera_yaw_p10
+    - ood_lighting_scale_0p6
+    - ood_visual_yaw_m10_light_0p6
+    - ood_visual_yaw_p10_light_0p6

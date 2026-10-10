@@ -1,0 +1,61 @@
+root: .
+
+paths:
+  data_root: data
+  exp_root: experiments
+
+experiment:
+  tag: hshared100
+  primary_variant: ours_zhzl
+  train_seed: 0
+  require_control_mode: pd_joint_delta_pos
+  require_action_dim: 8
+
+rep:
+  image_size: 128
+  normalize: false
+  encoder:
+    backbone: resnet50
+    pretrained: true
+    pool: avg
+    image_norm: imagenet
+  predictor:
+    hidden: 256
+  loss_weights:
+    pred: 1.0
+    inv: 1.0
+    variance: 1.0
+    covariance: 0.04
+  lejepa:
+    projection_hidden: 512
+    projection_dim: 128
+    normalize: false
+    loss_weights:
+      pred: 1.0
+      variance: 1.0
+      covariance: 0.04
+  batch_size: 32
+  lr: 3.0e-4
+  weight_decay: 1.0e-4
+  grad_clip: 10.0
+  num_workers: 4
+  device: null
+
+bc:
+  batch_size: 32
+  lr: 3.0e-4
+  weight_decay: 1.0e-4
+  policy_hidden: [512, 256]
+  stack_frames: 4
+  dataset_image_size: 128
+  seed: 0
+  num_workers: 4
+  device: null
+
+eval:
+  n_episodes: 100
+  base_seed: 300000
+  max_steps: 50
+  require_paired_initial_state: true
+  paired_initial_state_atol: 1.0e-6
+  device: null

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "splitjepa-robot"
+version = "0.1.0"
+description = "Minimal robot experiments for SplitJEPA and its LeJEPA comparison"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "h5py",
+  "numpy",
+  "pyyaml",
+  "torch>=2.0",
+  "torchvision>=0.15",
+  "tqdm",
+]
+
+[project.optional-dependencies]
+robot = ["mani-skill>=3.0.0", "sapien"]
+
+[tool.setuptools.packages.find]
+include = ["hl_maniskill*"]
